@@ -116,6 +116,32 @@ function raymond_voyage_widgets_init() {
 }
 add_action( 'widgets_init', 'raymond_voyage_widgets_init' );
 
+function ajout_widgets1() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer colonne 1', 'raymond-voyage' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Ajouter des widgets', 'raymond-voyage' ),
+		'before_widget' => '<div class="col-6">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+ }
+ add_action( 'widgets_init', 'ajout_widgets1' );
+
+ function ajout_widgets2() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer colonne 2', 'raymond-voyage' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Ajouter des widgets', 'raymond-voyage' ),
+		'before_widget' => '<div class="col-6">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+ }
+ add_action( 'widgets_init', 'ajout_widgets2' );
+
 /**
  * Enqueue scripts and styles.
  */

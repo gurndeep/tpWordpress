@@ -14,6 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<!--
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raymond-voyage' ) ); ?>">
 				<?php
@@ -26,7 +27,18 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'raymond-voyage' ), 'raymond-voyage', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
-		</div><!-- .site-info -->
+		</div>--><!-- .site-info -->
+		<div>
+			<div>
+				<?php the_custom_logo() ?>
+			</div>
+			<?php 
+				dynamic_sidebar( 'footer-1' );
+				dynamic_sidebar( 'footer-2' );
+			?>
+
+		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
