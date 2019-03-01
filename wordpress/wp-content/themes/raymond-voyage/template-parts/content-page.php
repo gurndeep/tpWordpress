@@ -20,10 +20,10 @@
 		<?php
 		the_content();
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raymond-voyage' ),
-			'after'  => '</div>',
-		) );
+		// wp_link_pages( array(
+		// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raymond-voyage' ),
+		// 	'after'  => '</div>',
+		// ) );
 		?>
 	</div><!-- .entry-content -->
 

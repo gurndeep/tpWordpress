@@ -1,3 +1,5 @@
+html{font-size: 62.5%;}
+
 body,
 button,
 input,
@@ -6,7 +8,7 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1);
+	@include font-size(1.4);
 	line-height: $font__line-height-body;
 }
 

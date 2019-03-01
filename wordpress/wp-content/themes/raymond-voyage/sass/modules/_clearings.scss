@@ -5,9 +5,7 @@
 .comment-content:before,
 .comment-content:after,
 .site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+.site-content:after{
 	@include clearfix;
 }
 
