@@ -112,6 +112,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin: 0 auto;
 }
 
+// .site-content{
+// 	max-width: 1200px;
+// 	margin: 0 auto;
+// }
+
+
+
 #colophon{
 	background-image: url("img/terre.png");
 	background-repeat: no-repeat;
@@ -181,4 +188,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .entry-content{
 	background-color: white;
 	padding: 50px 60px;
+}
+
+.site{
+	@extend .container;
+}
+
+//Content.php
+
+.article-grid{
+	display: grid;
+	grid-template-columns: 24% 74%;
+	grid-template-rows: auto;
+	grid-template-areas: "aside main";
+	grid-gap: 2%;
+
+	& > aside{
+		grid-area: aside;
+	}
+
+	& > div{
+		grid-area: main;
+	}
+
+	.content-article{
+		margin-top: 0;
+	}
 }
