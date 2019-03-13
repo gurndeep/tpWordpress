@@ -138,8 +138,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: -40px;
 }
 
-.site-footer{
-}
 
 .widget-footer{
 	display: flex;
@@ -190,7 +188,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .entry-content{
 	background-color: white;
-	padding: 50px 60px;
+	padding: 50px 80px;
+	a{
+		color: $color__background-body;
+		text-decoration: none;
+		font-weight: 600;
+	}
 }
 
 .site{
@@ -221,6 +224,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 //excerpt.php
 
+.bottom-nav{
+	ul{
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		float: right;
+		margin-bottom: 30px;
+	}
+	li{
+		display: inline-block;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 10px 20px;
+		background-color: $color__background-header;
+		border: 1px solid $color__text-main-nav;
+		color: $color__text-main-nav;
+		opacity: 0.75;
+		font-size: 1.4rem;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
 .row{
 	display: flex;
 	flex-wrap: wrap;
@@ -236,8 +265,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		text-decoration: none;
 		color: $color__text-link;
 		&::before{
-			content: "→";
+			content: "\f061";
+			font-family: "Font Awesome 5 Free";
 			font-weight: bold;
+			color: white;
+			background-color: $color__text-link;
+			padding: 3px 4px;
+			border-radius: 10px;
+			margin-right: 10px;
 		}
 	}
 }
@@ -292,6 +327,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 	:first-child{
 		&::before{
+			font-family: "Font Awesome 5 Free";
+			content: "\f186";
+			font-weight: 400;
 		}
 	}
 	:nth-child(2){
