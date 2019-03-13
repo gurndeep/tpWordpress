@@ -185,3 +185,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_image_size( thumbnail_lg, 300, 200, true);

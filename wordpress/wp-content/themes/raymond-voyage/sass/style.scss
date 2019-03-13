@@ -138,6 +138,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: -40px;
 }
 
+.site-footer{
+}
+
 .widget-footer{
 	display: flex;
 	flex-wrap: wrap;
@@ -213,5 +216,86 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 	.content-article{
 		margin-top: 0;
+	}
+}
+
+//excerpt.php
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card{
+	flex-basis: 30%;
+	background-color: $color__font-dark-bg;
+	margin: 20px 0;
+	.article-link{
+		padding: 0 30px;
+		text-decoration: none;
+		color: $color__text-link;
+		&::before{
+			content: "→";
+			font-weight: bold;
+		}
+	}
+}
+
+.card-img{
+	position: relative;
+	transition: filter 200ms;
+	&:hover{
+		filter: grayscale(80%);
+		transition: filter 200ms;
+	}
+}
+
+.date-excerpt{
+	position: absolute;
+	z-index: 100;
+	color: $color__font-dark-bg;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.card-text-content{
+	padding: 5px 30px;
+	a{
+		text-decoration: none;
+		color: $color__text-main;
+	}
+}
+
+.page-header{
+	display: block;
+	min-height: 50px;
+}
+
+//excerpt-forfaits.php
+
+.card.forfaits{
+	flex-basis: 45%;
+}
+
+.acf-fields{
+	margin: 0 0 10px;
+	padding: 0;
+	border-top: 1px solid gray;
+	li{
+		display: inline-block;
+		padding: 0 10px;
+	}
+	:first-child{
+		&::before{
+		}
+	}
+	:nth-child(2){
+		border-right: 1px solid gray;
+		border-left: 1px solid gray;
 	}
 }
