@@ -202,12 +202,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 //Content.php
 
+.no-style{
+	padding: 0;
+	margin: 0;
+	li{
+		list-style: none;
+		padding: 10px 0;
+	}
+	a{
+		padding: 0;
+	}
+}
+
+.content-article{
+	.article-link{
+		padding: 0;
+	}
+}
+
 .article-grid{
 	display: grid;
 	grid-template-columns: 24% 74%;
 	grid-template-rows: auto;
 	grid-template-areas: "aside main";
 	grid-gap: 2%;
+	margin-bottom: 40px;
 
 	& > aside{
 		grid-area: aside;
@@ -222,20 +241,88 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+.article-aside{
+	background-color: white;
+	font-weight: 600;
+	text-transform: uppercase;
+	p{
+		text-transform: uppercase;
+	}
+	div{
+		padding: 10px 20px;
+	}
+}
+
+//content-forfaits.php
+
+.button-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.forfait-grid{
+	display: grid;
+	grid-template-columns: 49% 49%;
+	grid-template-rows: auto;
+	grid-template-areas: "gauche droite";
+	grid-gap: 2%;
+	margin-bottom: 40px;
+
+	& > aside{
+		grid-area: gauche;
+	}
+
+	& > div{
+		grid-area: droite;
+	}
+
+	.content-article{
+		margin-top: 0;
+	}
+	button{
+		border: none;
+		background-color: $color__button;
+		color: $color__font-button;
+		font-size: 1.6rem;
+		font-weight: 600;
+		padding: 20px 40px;
+	}
+}
+
 //excerpt.php
 
-.bottom-nav{
-	ul{
-		margin: 0;
-		padding: 0;
-		font-size: 0;
-		float: right;
-		margin: 10px 0 30px;
-	}
-	li{
-		display: inline-block;
-	}
-	a {
+// .bottom-nav{
+// 	ul{
+// 		margin: 0;
+// 		padding: 0;
+// 		font-size: 0;
+// 		float: right;
+// 		margin: 10px 0 30px;
+// 	}
+// 	li{
+// 		display: inline-block;
+// 	}
+// 	a {
+// 		display: block;
+// 		text-decoration: none;
+// 		padding: 10px 20px;
+// 		background-color: $color__background-header;
+// 		border: 1px solid $color__text-main-nav;
+// 		color: $color__text-main-nav;
+// 		opacity: 0.75;
+// 		font-size: 1.4rem;
+// 		&:hover{
+// 			opacity: 1;
+// 		}
+// 	}
+// }
+
+.nav-links{
+	float: right;
+	a {	
+		text-transform: uppercase;
 		display: block;
 		text-decoration: none;
 		padding: 10px 20px;
@@ -260,20 +347,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	flex-basis: 30%;
 	background-color: $color__font-dark-bg;
 	margin: 20px 0;
-	.article-link{
-		padding: 0 30px;
-		text-decoration: none;
+}
+
+.article-link{
+	padding: 0 30px;
+	text-decoration: none;
+	color: $color__text-link;
+	text-transform: uppercase;
+	font-weight: 500;
+	&:hover{
+		opacity: 0.8;
+	}
+	&:visited{
 		color: $color__text-link;
-		&::before{
-			content: "\f061";
-			font-family: "Font Awesome 5 Free";
-			font-weight: bold;
-			color: white;
-			background-color: $color__text-link;
-			padding: 4px 5px;
-			border-radius: 10px;
-			margin-right: 10px;
-		}
+	}
+	&::before{
+		content: "\f061";
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		color: white;
+		background-color: $color__text-link;
+		padding: 4px 5px;
+		border-radius: 10px;
+		margin-right: 10px;
 	}
 }
 

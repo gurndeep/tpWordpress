@@ -59,12 +59,12 @@ get_header();
 				?>
 			</section>
 
-			<div class="bottom-nav">
+			<!-- <div class="bottom-nav">
 				<ul>
 					<li><a href="#">FORFAITS PLUS ANCIENS</a></li>
 					<li><a href="#">FORFAITS PLUS RÉCENTS</a></li>
 				</ul>
-			</div>
+			</div> -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

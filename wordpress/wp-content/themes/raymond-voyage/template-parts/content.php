@@ -31,24 +31,26 @@
 
 	<main class="article-grid">
 		<aside>
-			<?php the_post_thumbnail('medium');?>
-			<div>
-				<p>DATE: <?php the_date(); ?></p>
-				<?php
+			<div class="article-aside">
+				<?php the_post_thumbnail('medium');?>
+				<div>
+					<p>DATE: <?php the_date(); ?></p>
+					<?php
 
-					$categories = get_the_category();
-					if($categories):
-				?>
-					<span class="infos">Catégorie(s): </span>
-					<ul class="no-style">
-						<?php foreach($categories as $cat): ?>
-							<?php $url = get_category_link($cat->term_id); ?>
-							<li><a class="call-to-action" href="<?php echo $url; ?>">
-								<?php echo $cat->name; ?>
-							</a></li>
-						<?php endforeach; ?>
-					</ul>
-				<?php endif; ?>
+						$categories = get_the_category();
+						if($categories):
+					?>
+						<span class="infos">Catégorie(s): </span>
+						<ul class="no-style">
+							<?php foreach($categories as $cat): ?>
+								<?php $url = get_category_link($cat->term_id); ?>
+								<li><a class="article-link" href="<?php echo $url; ?>">
+									<?php echo $cat->name; ?>
+								</a></li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
+				</div>
 			</div>
 		</aside>
 		<div class="entry-content content-article">
@@ -77,7 +79,7 @@
 
 				$blogUrl = get_permalink( get_option('page_for_posts'));
 				?>
-				<a href="<?php echo $blogUrl ?>" class="call-to-action">Retour au blogue</a>
+				<a href="<?php echo $blogUrl ?>" class="article-link">Retour au blogue</a>
 			</div>
 		</div><!-- .entry-content -->
 	</main>

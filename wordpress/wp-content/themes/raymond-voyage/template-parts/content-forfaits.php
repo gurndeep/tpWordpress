@@ -1,4 +1,16 @@
 <?php
+
+$field = get_field('moyen_transport');
+$return = '';
+if ($field == 'Par autobus'){
+	$return = 'icone-bus';
+}
+elseif ($field == 'Par avion'){
+	$return = 'icone-avion';
+}
+elseif ($field == 'Par train'){
+	$return = 'icone-train';
+}
 /**
  * Template part for displaying posts
  *
@@ -29,39 +41,20 @@
 		<?php //endif; ?>
 	</header><!-- .entry-header -->
 
-	<main class="article-grid">
+	<main class="forfait-grid">
 		<aside>
-			<?php the_post_thumbnail('medium');?>
-			<div>
-				<p>DATE: <?php the_date(); ?></p>
-				<?php
-
-					$categories = get_the_category();
-					if($categories):
-				?>
-					<span class="infos">Catégorie(s): </span>
-					<ul class="no-style">
-						<?php foreach($categories as $cat): ?>
-							<?php $url = get_category_link($cat->term_id); ?>
-							<li><a class="call-to-action" href="<?php echo $url; ?>">
-								<?php echo $cat->name; ?>
-							</a></li>
-						<?php endforeach; ?>
-					</ul>
-				<?php endif; ?>
+			<?php the_post_thumbnail('large');?>
+			<div class="button-container">
+				<button>ACHETEZ CE FORFAIT</button>
 			</div>
 		</aside>
 		<div class="entry-content content-article">
 			<h2>DÉTAILS</h2>
-            <hr>
-			<div class="acf-fields">
-				<?php 
-					the_field('nb_nuits');
-					the_field('moyen_transport');
-					the_field('prix');
-				
-				?>
-			</div>
+			<ul class="acf-fields">
+				<li><?php the_field('nb_nuits'); ?></li>
+				<li class="<?php echo $return ?>"><?php the_field('moyen_transport'); ?></li>
+				<li><?php the_field('prix'); ?></li>
+			</ul>
 			<div>
                 <h2>DESCRIPTION</h2>
 				<?php
@@ -87,7 +80,7 @@
 
 				$blogUrl = get_permalink( get_option('page_for_posts'));
 				?>
-				<a href="<?php echo $blogUrl ?>" class="call-to-action">Retour au blogue</a>
+				<a href="<?php echo $blogUrl ?>" class="article-link">Retour au forfaits</a>
 			</div>
 		</div><!-- .entry-content -->
 	</main>
