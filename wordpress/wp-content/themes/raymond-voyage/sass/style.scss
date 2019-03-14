@@ -230,7 +230,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		padding: 0;
 		font-size: 0;
 		float: right;
-		margin-bottom: 30px;
+		margin: 10px 0 30px;
 	}
 	li{
 		display: inline-block;
@@ -270,7 +270,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			font-weight: bold;
 			color: white;
 			background-color: $color__text-link;
-			padding: 3px 4px;
+			padding: 4px 5px;
 			border-radius: 10px;
 			margin-right: 10px;
 		}
@@ -323,17 +323,63 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-top: 1px solid gray;
 	li{
 		display: inline-block;
-		padding: 0 10px;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: 600;
 	}
 	:first-child{
 		&::before{
 			font-family: "Font Awesome 5 Free";
 			content: "\f186";
 			font-weight: 400;
+			margin-right: 5px;
+		}
+		&::after{
+			content: " nuits";
 		}
 	}
 	:nth-child(2){
 		border-right: 1px solid gray;
 		border-left: 1px solid gray;
+		&.icone-bus{
+			&::before{
+				font-family: "Font Awesome 5 Free";
+				content: "\f207";
+				font-weight: 600;
+				margin-right: 5px;
+			}
+		}
+		&.icone-train{
+			&::before{
+				font-family: "Font Awesome 5 Free";
+				content: "\f238";
+				font-weight: 600;
+				margin-right: 5px;
+			}
+		}
+		&.icone-avion{
+			&::before{
+				font-family: "Font Awesome 5 Free";
+				display: inline-block;
+				content: "\f072";
+				font-weight: 600;
+				margin-right: 5px;
+				transform: rotate(-45deg);
+			}
+		}
 	}
+	:last-child{
+		&::before{
+			font-family: "Font Awesome 5 Free";
+			content: "\f155";
+			font-weight: 600;
+			margin-right: 5px;
+		}
+
+	}
+}
+//archive.php
+
+.archive-categorie{
+	color: $color__font-dark-bg;
 }

@@ -20,7 +20,7 @@ get_header();
 				$post_type = get_post_type();
 				if($post_type == 'post'):?>
 					<h1>Blogue</h1>
-					<h2><?php the_archive_title();?></h2>
+					<h2 class="archive-categorie"><?php the_archive_title();?></h2>
 					<?php
 					else : ?>
 						<h1><?php echo $post_type; ?></h1>
@@ -59,9 +59,15 @@ get_header();
 				?>
 			</section>
 
+			<div class="bottom-nav">
+				<ul>
+					<li><a href="#">FORFAITS PLUS ANCIENS</a></li>
+					<li><a href="#">FORFAITS PLUS RÉCENTS</a></li>
+				</ul>
+			</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
