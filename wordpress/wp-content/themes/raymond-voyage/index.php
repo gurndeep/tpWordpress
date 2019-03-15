@@ -14,55 +14,56 @@
 
 get_header();
 ?>
+	<div class="container">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;?>
-
-			<section class="row">
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/excerpt', get_post_type() );
-
-				endwhile;?>
-			</section>
 			<?php
-			the_posts_navigation();
+			if ( have_posts() ) :
 
-		else :
+				if ( is_home() && ! is_front_page() ) :
+					?>
+					<header>
+						<h1 class="page-title"><?php single_post_title(); ?></h1>
+					</header>
+					<?php
+				endif;?>
 
-			get_template_part( 'template-parts/content', 'none' );
+				<section class="row">
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
 
-		endif;
-		?>
+						/*
+						* Include the Post-Type-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/excerpt', get_post_type() );
 
-		<!-- <div class="bottom-nav">
-			<ul>
-				<li><a href="#">FORFAITS PLUS ANCIENS</a></li>
-				<li><a href="#">FORFAITS PLUS RÉCENTS</a></li>
-			</ul>
-		</div> -->
+					endwhile;?>
+				</section>
+				<?php
+				the_posts_navigation();
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+			?>
+
+			<!-- <div class="bottom-nav">
+				<ul>
+					<li><a href="#">FORFAITS PLUS ANCIENS</a></li>
+					<li><a href="#">FORFAITS PLUS RÉCENTS</a></li>
+				</ul>
+			</div> -->
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div>
 
 <?php
 get_footer();

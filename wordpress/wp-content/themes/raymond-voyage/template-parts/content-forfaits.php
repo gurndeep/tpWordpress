@@ -78,7 +78,7 @@ elseif ($field == 'Par train'){
 				// 	'after'  => '</div>',
 				// ) );
 
-				$blogUrl = get_permalink( get_option('page_for_posts'));
+				$blogUrl = get_post_type_archive_link('forfaits');
 				?>
 				<a href="<?php echo $blogUrl ?>" class="article-link">Retour au forfaits</a>
 			</div>
