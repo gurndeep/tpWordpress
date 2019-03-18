@@ -45,7 +45,7 @@ elseif ($field == 'Par train'){
 		<aside>
 			<?php the_post_thumbnail('large');?>
 			<div class="button-container">
-				<button>ACHETEZ CE FORFAIT</button>
+				<a href="#">ACHETEZ CE FORFAIT</a>
 			</div>
 		</aside>
 		<div class="entry-content content-article">

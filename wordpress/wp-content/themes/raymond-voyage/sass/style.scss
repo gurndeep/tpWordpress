@@ -246,6 +246,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	.article-link{
 		padding: 0;
 	}
+	h2{
+		text-transform: uppercase;
+	}
 }
 
 .article-grid{
@@ -288,6 +291,23 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	justify-content: center;
 	align-items: center;
 	margin-top: 30px;
+	a{
+		border: none;
+		background-color: $color__button;
+		color: $color__font-button;
+		font-size: 1.6rem;
+		font-weight: 600;
+		padding: 20px 40px;
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.7);
+		transition: box-shadow 300ms;
+		&:hover{
+			box-shadow: none;
+			transition: box-shadow 300ms;
+		}
+		
+	}
 }
 
 .forfait-grid{
@@ -308,14 +328,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 	.content-article{
 		margin-top: 0;
-	}
-	button{
-		border: none;
-		background-color: $color__button;
-		color: $color__font-button;
-		font-size: 1.6rem;
-		font-weight: 600;
-		padding: 20px 40px;
 	}
 }
 
@@ -506,4 +518,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .archive-categorie{
 	color: $color__font-dark-bg;
+}
+
+//front-page.php
+
+.forfaits{
+	background-color: $color__background_sable;
 }

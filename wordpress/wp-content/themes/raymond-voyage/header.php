@@ -67,7 +67,9 @@
 			<div class="slogan">
 				<div>
 					<h2><?php echo $blogInfo; ?></h2>
-					<a href="<?php echo $link ?>">DÉCOUVREZ NOS FORFAITS</a>
+					<div class="button-container">
+						<a href="<?php echo $link ?>">DÉCOUVREZ NOS FORFAITS</a>
+					</div>
 				</div>
 			</div>
 			<?php endif ?>
