@@ -1,0 +1,29 @@
+.site-header{
+	padding-top: 20px;
+}
+
+#primary-menu{
+	margin-top: 20px;
+}
+
+#front-page{
+	.background-front-page{
+		background-image: url('img/beach.jpg');
+		background-size: cover;
+		min-height: 100vh;
+	}
+}
+
+.slogan{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	min-height: 70vh;
+	h2{
+		flex-basis: 100%;
+		color:  $color__font-dark-bg;
+		font-size: 4.8rem
+	}
+}

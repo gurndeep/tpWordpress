@@ -1,0 +1,23 @@
+.ninja-forms-field{
+	max-width: 50%;
+}
+
+.nf-form-fields-required{
+	display: none;
+}
+
+#nf-field-8{
+	border: none;
+	background-color: $color__background_button_form;
+	color: $color__font-dark-bg;
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding: 15px 30px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: opacity 300ms;
+	&:hover{
+		opacity: 0.8;
+		transition: opacity 300ms;
+	}
+}

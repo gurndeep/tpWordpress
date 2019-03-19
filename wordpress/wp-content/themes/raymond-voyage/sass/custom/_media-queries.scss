@@ -1,0 +1,116 @@
+@media(max-width: 1250px){
+	.container{
+		max-width: 90%;
+	}
+}
+
+@media(max-width: 920px){
+	.main-navigation{
+		display: none;
+	}
+
+	.card{
+		flex-basis: 49%;
+	}
+}
+
+@media(max-width: 840px){
+	.forfait-grid{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: "sect1"
+							 "sect2";
+		grid-gap: 0%;
+	
+		& > aside{
+			grid-area: sect1;
+			margin-bottom: 30px;
+			img{
+				width: 100%;
+			}
+		}
+	
+		& > div{
+			grid-area: sect2;
+		}
+	
+		.content-article{
+			margin-top: 0;
+		}
+	}
+	.article-grid{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: "sect1"
+							 "sect2";
+		grid-gap: 0%;
+		margin-bottom: 40px;
+	
+		& > aside{
+			grid-area: sect1;
+			margin-bottom: 30px;
+		}
+	
+		& > div{
+			grid-area: sect2;
+		}
+	
+		.content-article{
+			margin-top: 0;
+		}
+	}
+
+	.article-aside{
+		display: flex;
+	}
+}
+
+
+@media(max-width: 700px){
+	.ninja-forms-field{
+		max-width: 100%;
+	}
+
+	.card.forfaits{
+		flex-basis: 100%;
+	}
+
+	.entry-content{
+		padding: 50px 60px;
+	}
+}
+
+@media(max-width: 651px){
+	#colophon{
+		.container{
+			justify-content: center;
+		}
+	}
+}
+
+@media(max-width: 580px){
+	.card{
+		flex-basis: 100%;
+	}
+
+	.entry-content{
+		padding: 50px 40px;
+	}
+}
+
+@media(max-width: 530px){
+	.article-aside{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+@media(max-width: 400px){
+	.site-branding{
+		max-width: 70%;
+	}
+}

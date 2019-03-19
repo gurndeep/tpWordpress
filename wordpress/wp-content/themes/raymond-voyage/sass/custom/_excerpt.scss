@@ -1,0 +1,168 @@
+//excerpt.php
+
+.nav-links{
+	float: right;
+	a {	
+		text-transform: uppercase;
+		display: block;
+		text-decoration: none;
+		padding: 10px 20px;
+		background-color: $color__background-header;
+		border: 1px solid $color__text-main-nav;
+		color: $color__text-main-nav;
+		opacity: 0.75;
+		font-size: 1.4rem;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card{
+	flex-basis: 32%;
+	background-color: $color__font-dark-bg;
+	margin: 20px 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.article-link{
+	padding: 0 30px;
+	text-decoration: none;
+	color: $color__text-link;
+	text-transform: uppercase;
+	font-weight: 500;
+	&:hover{
+		opacity: 0.8;
+	}
+	&:visited{
+		color: $color__text-link;
+	}
+	&::before{
+		content: "\f061";
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		color: white;
+		background-color: $color__text-link;
+		padding: 4px 5px;
+		border-radius: 10px;
+		margin-right: 10px;
+	}
+}
+
+.card-img{
+	position: relative;
+	transition: filter 200ms;
+	&:hover{
+		filter: grayscale(80%);
+		transition: filter 200ms;
+	}
+}
+
+.date-excerpt{
+	position: absolute;
+	z-index: 100;
+	color: $color__font-dark-bg;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.card-text-content{
+	padding: 5px 30px;
+	a{
+		text-decoration: none;
+		color: $color__text-main;
+	}
+}
+
+.page-header{
+	display: block;
+	min-height: 50px;
+}
+
+//excerpt-forfaits.php
+
+.card.forfaits{
+	flex-basis: 49%;
+	img{
+		transition: all 300ms;
+		&:hover{
+			transition: all 300ms;
+			filter: grayscale(100%);
+		}
+	}
+}
+
+.acf-fields{
+	margin: 0 0 10px;
+	padding: 0;
+	border-top: 1px solid gray;
+	li{
+		display: inline-block;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+	:first-child{
+		&::before{
+			font-family: "Font Awesome 5 Free";
+			content: "\f186";
+			font-weight: 400;
+			margin-right: 7px;
+		}
+		&::after{
+			content: " nuits";
+		}
+	}
+	:nth-child(2){
+		border-right: 1px solid gray;
+		border-left: 1px solid gray;
+		&.icone-bus{
+			&::before{
+				font-family: "Font Awesome 5 Free";
+				content: "\f207";
+				font-weight: 600;
+				margin-right: 7px;
+			}
+		}
+		&.icone-train{
+			&::before{
+				font-family: "Font Awesome 5 Free";
+				content: "\f238";
+				font-weight: 600;
+				margin-right: 7px;
+			}
+		}
+		&.icone-avion{
+			&::before{
+				font-family: "Font Awesome 5 Free";
+				display: inline-block;
+				content: "\f072";
+				font-weight: 600;
+				margin-right: 7px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	:last-child{
+		&::before{
+			font-family: "Font Awesome 5 Free";
+			content: "\f155";
+			font-weight: 600;
+			margin-right: 7px;
+		}
+		&::after{
+			content:"$";
+		}
+
+	}
+}

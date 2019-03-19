@@ -1,0 +1,7 @@
+a > h2{
+	transition: opacity 300ms;
+	&:hover{
+		transition: opacity 300ms;
+		opacity: 0.8;
+	}
+}

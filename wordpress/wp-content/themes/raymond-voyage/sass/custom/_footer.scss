@@ -1,0 +1,66 @@
+#colophon{
+	background-image: url("img/terre.png");
+	background-repeat: no-repeat;
+	background-size: 600px auto;
+	background-position: center center;
+	background-color: $color__background-footer;
+	color: $color__font-dark-bg;
+	padding: 15px 0;
+}
+
+#colophon .container{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.medias-sociaux > div{
+	margin-top: -40px;
+}
+
+
+.widget-footer{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	max-width: 300px;
+	min-height: 130px;
+	h3{
+		flex-basis: 100%;
+		max-height: 30px;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 0;
+		&::after{
+			content: '';
+			border-top: 2px solid;
+			margin: 0 20px 0 0;
+			flex: 1 0 20px;
+			margin: 0 0 0 20px;
+		}
+	}
+	div{
+		padding: 0 10px;
+	}
+	i{
+		font-size: 4rem;
+	}
+	.btn-ghost{
+		text-decoration: none;
+		padding: 10px 20px;
+		border: 1px solid $color__font-dark-bg;
+		margin: 10px 0;
+		display: inline-block;
+	}
+	a{
+		padding: 0 20px 0 0;
+		display: inline-block;
+		color: $color__font-dark-bg;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.forfaits-front-page{
+	background-color: $color__background_sable;
+	padding: 30px 0;
+}
+
+.article-front-page{
+	padding: 30px 0;
+	.title-fp{
+		color: $color__font-dark-bg;
+	}
+}
+
+.title-fp {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0 0 0;
+}
+
+.title-fp:before,
+.title-fp:after {
+    content: '';
+    border-top: 1px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.title-fp:after {
+    margin: 0 0 0 20px;
+}
