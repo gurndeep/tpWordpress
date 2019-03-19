@@ -300,7 +300,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		padding: 20px 40px;
 		text-decoration: none;
 		border-radius: 10px;
-		box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.7);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		transition: box-shadow 300ms;
 		&:hover{
 			box-shadow: none;
@@ -384,9 +384,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .card{
-	flex-basis: 30%;
+	flex-basis: 32%;
 	background-color: $color__font-dark-bg;
 	margin: 20px 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .article-link{
@@ -450,7 +451,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 //excerpt-forfaits.php
 
 .card.forfaits{
-	flex-basis: 45%;
+	flex-basis: 49%;
 }
 
 .acf-fields{
@@ -522,6 +523,44 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 //front-page.php
 
-.forfaits{
+.forfaits-front-page{
 	background-color: $color__background_sable;
+	padding: 30px 0;
+}
+
+.article-front-page{
+	padding: 30px 0;
+	.title-fp{
+		color: $color__font-dark-bg;
+	}
+}
+
+.title-fp {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0 0 0;
+}
+
+.title-fp:before,
+.title-fp:after {
+    content: '';
+    border-top: 1px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.title-fp:after {
+    margin: 0 0 0 20px;
+}
+
+//Media-queries
+
+@media(max-width: 920px){
+	.main-navigation{
+		display: none;
+	}
 }

@@ -46,8 +46,9 @@ get_header();
 
         if ( $derniersForfaits->have_posts() ) :
             ?>
-            <section class="forfaits">
+            <section class="forfaits-front-page">
                 <div class="container">
+                    <h2 class="title-fp">FORFAITS VEDETTES</h2>
                     <div class="row">
                         <?php
                         while ( $derniersForfaits->have_posts() ) {
@@ -61,8 +62,9 @@ get_header();
         
         if ( $derniersArticles->have_posts() ) :
             ?>
-            <section class="article">
+            <section class="article-front-page">
                 <div class="container">
+                    <h2 class="title-fp">DERNIERS ARTICLES</h2>
                     <div class="row">
                         <?php
                         while ( $derniersArticles->have_posts() ) {
